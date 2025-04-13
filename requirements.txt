@@ -27,3 +27,4 @@ urllib3
 whitenoise
 cffi
 cryptography
+pandas
