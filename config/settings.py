@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     # "repairmybike.in"
+    "127.0.0.1",
     ".railway.app",
     "https://repairmybike-production.up.railway.app/",
     ]
