@@ -31,3 +31,4 @@ pandas
 supabase
 django-cors-headers
 pillow
+python-dotenv
