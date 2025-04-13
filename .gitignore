@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+local_settings.py
+.env
+.env.*
+
+# Pytest and coverage
+htmlcov/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# VS Code
+.vscode/
+
+# Mac/Linux
+.DS_Store
+*.swp
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
