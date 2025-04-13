@@ -11,21 +11,19 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(dotenv_path=BASE_DIR / ".env")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'ym#=km$q!3u9#pcu&br#l2h$emmkd!p-2=mou)mn&n%0wguw34')
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DJANGO_SECRET_KEY = 'django-insecure-f1d3d51b88$qg3c$zfn%^z$rfw@esiym5s#e*5tm$z3^+r^xqn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
+DEBUG = True
 
 ALLOWED_HOSTS = [ 
     # "repairmybike.in"
@@ -39,7 +37,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app"
 ]
 if DEBUG:
-    ALLOWED_HOSTS  = ['* ']
+    ALLOWED_HOSTS  = ['*']
 
 # Application definition
 
@@ -102,28 +100,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-
-
-
-
-
-
-
-
-
-
-# DATABASE
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "repairmybikeprod",
+        "USER": "postgres",
+        "PASSWORD": "mypassword",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
-
 
 
 # Password validation
