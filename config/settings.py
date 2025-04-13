@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     # "repairmybike.in"
-    ".railway.app"
+    ".railway.app",
+    "https://repairmybike-production.up.railway.app/",
     ]
 
 
@@ -35,7 +36,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app"
 ]
 if DEBUG:
-    ALLOWED_HOSTS  = ['*']
+    ALLOWED_HOSTS  = ['* ']
 
 # Application definition
 
