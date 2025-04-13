@@ -28,3 +28,6 @@ whitenoise
 cffi
 cryptography
 pandas
+supabase
+django-cors-headers
+pillow
